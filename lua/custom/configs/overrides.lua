@@ -27,6 +27,7 @@ M.treesitter = {
     "bash",
     "dockerfile",
     "json",
+    "terraform",
   },
   indent = {
     enable = true,
@@ -41,7 +42,11 @@ M.mason = {
     -- lua stuff
     "lua-language-server",
     "stylua",
-
+    
+    -- devops stuff
+    "terraform-ls",
+    "dockerfile-language-server",
+    "hadolint",
     -- web dev stuff
     "css-lsp",
     "tailwindcss-language-server",
@@ -73,7 +78,6 @@ M.mason = {
     "gofumpt",
     "golangci-lint",
     "golangci-lint-langserver",
-    "dockerfile-language-server",
 
     -- c# stuff
     "csharpier",
