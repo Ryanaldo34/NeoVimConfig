@@ -1,6 +1,7 @@
 local M = {}
 
 M.treesitter = {
+  auto_install = true,
   ensure_installed = {
     "vim",
     "lua",
@@ -34,6 +35,15 @@ M.treesitter = {
     -- disable = {
     --   "python"
     -- },
+  },
+  autotag = {
+    enable = true,
+  },
+  highlight = {
+    enable = true,
+  },
+  textobjects = {
+    enable = true,
   },
 }
 

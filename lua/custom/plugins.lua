@@ -23,6 +23,10 @@ local plugins = {
     "nvim-neotest/nvim-nio"
   },
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
     "rcarriga/nvim-dap-ui",
     event = "VeryLazy",
     dependencies = {"nfussenegger/nvim-dap", "nvim-neotest/nvim-nio"},
@@ -58,6 +62,41 @@ local plugins = {
   {
     "williamboman/mason.nvim",
     opts = overrides.mason
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("nvim-surround").setup()
+    end
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter"
+    },
+    config = function()
+      require('nvim-ts-autotag').setup({
+        enable_close = true, -- Auto close tags
+        enable_rename = true, -- Auto rename pairs of tags
+        enable_close_on_slash = true -- Auto close on trailing </
+      })
+    end,
+    lazy = true,
+    event = "VeryLazy",
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+    opts = {
+      map_cr = true,
+    },
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
