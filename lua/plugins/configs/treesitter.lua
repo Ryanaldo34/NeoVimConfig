@@ -7,7 +7,6 @@ local options = {
   },
 
   indent = { enable = true },
-  autotag = { enable = true },
 }
 
 return options

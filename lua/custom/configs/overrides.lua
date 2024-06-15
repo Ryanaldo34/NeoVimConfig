@@ -36,9 +36,6 @@ M.treesitter = {
     --   "python"
     -- },
   },
-  autotag = {
-    enable = true,
-  },
   highlight = {
     enable = true,
   },
