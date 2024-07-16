@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "clangd", "tsserver", "rust_analyzer", "csharp_ls", "terraformls"}
+local servers = { "html", "cssls", "clangd", "tsserver", "rust_analyzer", "csharp_ls", "terraformls",}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -12,6 +12,27 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.jsonls.setup {
+ settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true }
+    }
+  }
+}
+
+lspconfig.yamlls.setup {
+  settings = {
+    yaml = {
+      schemaStore = {
+        enable = false,
+        url = "",
+      },
+      schemas = require('schemastore').yaml.schemas()
+    }
+  }
+}
 
 lspconfig.pyright.setup({
   on_attach = on_attach,

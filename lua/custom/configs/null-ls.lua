@@ -11,6 +11,7 @@ local opts = {
     null_ls.builtins.formatting.dart_format,
     null_ls.builtins.formatting.gofmt,
     null_ls.builtins.formatting.csharpier,
+    null_ls.builtins.formatting.hclfmt,
     null_ls.builtins.formatting.sqlfmt,
     null_ls.builtins.diagnostics.sqlfluff,
     null_ls.builtins.formatting.rustfmt,
