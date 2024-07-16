@@ -153,6 +153,16 @@ local plugins = {
       require "custom.configs.conform"
     end,
   },
+  {
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim', -- optional for vim.ui.select
+        'mfussenegger/nvim-dap'
+    },
+    config = true,
+  }
 
   -- To make a plugin not be loaded
   -- {

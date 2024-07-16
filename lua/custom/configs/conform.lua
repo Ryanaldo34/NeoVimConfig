@@ -6,7 +6,7 @@ local options = {
 		lua = { "stylua" },
     go = { "goimports", "gofmt" },
 		javascript = { "prettier" },
-    python = { "isort", "black" },
+    python = { "black" },
 		css = { "prettier" },
 		html = { "prettier" },
 

@@ -49,7 +49,6 @@ M.mason = {
     -- lua stuff
     "lua-language-server",
     "stylua",
-    
     -- devops stuff
     "terraform-ls",
     "dockerfile-language-server",
@@ -63,6 +62,7 @@ M.mason = {
     "prettier",
     "eslint-lsp",
     "js-debug-adapter",
+    "json-lsp",
     -- c/cpp stuff
     "clangd",
     "clang-format",
@@ -91,7 +91,8 @@ M.mason = {
     "csharp-language-server",
 
     -- sql stuff
-    "sqlfmt"
+    "sqlfmt",
+    "sqlfluff"
   },
 }
 
